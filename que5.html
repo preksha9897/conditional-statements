@@ -1,0 +1,41 @@
+//E-COMMERCE DISCOUNT ENGINE//
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let cartAmount = Number(prompt("Enter cart amount:"));
+        let membership = prompt("Enter membership (gold/silver/regular):");
+        let coupon = prompt("Enter coupon code (SAVE10 or NONE):");
+        let festival = prompt("Is festival offer available? (yes/no)");
+
+        let discount = 0;
+        if (membership === "gold") {
+            discount += cartAmount * 0.20;
+        }
+        else if (membership === "silver") {
+            discount += cartAmount * 0.10;
+        }
+ 
+        if (coupon === "SAVE10") {
+            discount += cartAmount * 0.10;
+        }
+
+        
+        if (festival === "yes") {
+            discount += cartAmount * 0.05;
+        }
+
+        let finalPrice = cartAmount - discount;
+
+        console.log("Cart Amount: Rs. " + cartAmount);
+        console.log("Total Discount: Rs. " + discount);
+        console.log("Final Price : Rs. " + finalPrice);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

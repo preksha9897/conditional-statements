@@ -1,0 +1,41 @@
+// ELECTRICITY BILL
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTRICITY BILL</title>
+    <script>
+        let units = 300;
+        let bill = 0;
+        let fixedcharge = 100;
+        let latepenalty = 30;
+        if (units <= 100) {
+            bill = unit * 4;
+
+        }
+        else if (units > 100 && units <= 200) {
+            bill = (100 * 3) + (units - 100) * 5;
+        }
+        else if (units > 200 && units <= 300) {
+            bill = (100 * 3) + (100 * 5) + (units - 200) * 7;
+        }
+        else {
+            bill = (100 * 3) + (100 * 5) + (100 * 7) + (units - 300) * 10;
+        }
+
+        let totalbill = bill + fixedcharge + latepenalty;
+        console.log("electricity bill" + "is" + " Rs" + totalbill);
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

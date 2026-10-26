@@ -1,0 +1,37 @@
+// income tax calculator//
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let income = Number(prompt("enter your income"));
+        let tax = 0;
+
+
+        if (income <= 100000) {
+            tax = 0;
+        }
+        else if (income > 100000 && income <= 200000) {
+            tax = (income - 100000) * 0.05;
+        }
+        else if (income > 200000 && income <= 300000) {
+            tax = (100000 * 0.05) + (income - 200000) * 0.20;
+        }
+        else {
+            tax = (100000 * 0.05) + (100000 * 0.20) + (income - 300000) * 0.30;
+        }
+        console.log("Annual Income: Rs. " + income);
+        console.log("Payable Tax: Rs. " + tax);
+        console.log("Income After Tax: Rs. " + (income - tax));
+    
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

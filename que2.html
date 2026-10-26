@@ -1,0 +1,56 @@
+// ATM WITHDRAWL//
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atm withdrawl</title>
+    <script>
+        let pin = 12345;
+        let enterpin = Number(prompt("Enter your ATM PIN:"));
+
+        let balance = 5000;
+        let withdrawlAmount = Number(prompt("Enter withdrawl amount:"));
+        let dailyLimit = 3000;
+        let withdrawlToday = 0;
+
+        let status = prompt("Enter account status (active/inactive):");
+
+
+        if (withdrawlAmount > balance) {
+            console.log("insufficient balance");
+        }
+
+        else if (withdrawlAmount > dailyLimit) {
+            console.log("limit excess");
+        }
+
+
+        else if (status === "active" && enterpin !== pin) {
+            console.log("enter correct pin");
+
+        }
+        else if (status != "active") {
+            console.log(" inactive account");
+        }
+        else {
+            console.log("account and pin verified successfully");
+            balance = balance - withdrawlAmount;
+            withdrawlToday = withdrawlAmount;
+
+
+            console.log("Remaining balance: rs." + "  " + balance);
+            console.log("withdrawl today: rs." + "   " + withdrawlToday);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

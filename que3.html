@@ -1,0 +1,70 @@
+// STUDENT RESULT ANALYZER//
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let total = 0;
+        let lowest = 100;
+        let fail = false;
+        for (let i = 1; i <= 5; i++) {
+            let marks = Number(prompt("enter marks of subject" + i));
+            total += marks;
+
+            if (marks < 33) {
+                fail = true;
+            }
+            if (marks < lowest) {
+                lowest = marks;
+            }
+        }
+
+        let attendance = Number(prompt("Enter attendance percentage"));
+        let percentage = total / 5;
+        let grade;
+
+        if (fail) {
+            console.log(" grade D");
+        }
+        else if (percentage >= 90) {
+            console.log(" grade A");
+        }
+        else if (percentage >= 60) {
+            console.log(" grade B");
+        }
+        else {
+            console.log(" grade C");
+        }
+
+
+        console.log("Percentage: " + percentage + "%");
+        console.log("Lowest Marks: " + lowest);
+        console.log("Grade: " + grade);
+
+        if (fail) {
+            console.log("Final Result: FAIL");
+        }
+        else {
+            console.log("Final Result: PASS");
+        }
+
+        if (attendance >= 75) {
+            console.log("Attendance: Satisfactory");
+        }
+        else {
+            console.log("Attendance: Shortage");
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
