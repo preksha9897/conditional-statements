@@ -1,0 +1,52 @@
+// loan eligibility checker//
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let age = Number(prompt("enter your age :"));
+        let salary = Number(prompt(" enter your salary:"));
+        let creditScore = Number(prompt(" enter your creditscore:"));
+        let existingLoan = Number(prompt(" enter number of existing loan:"));
+        let experience = Number(prompt("enter years of experience"));
+
+        if (age >= 21 && age <= 60 &&
+            salary >= 25000 &&
+            creditScore >= 650 &&
+            experience >= 2) {
+
+            console.log(" Eligible");
+
+
+            if (creditScore >= 650 && existingLoan == 0) {
+                console.log("Risk Level: Low Risk");
+                console.log("Loan Status: Strong Candidate");
+            }
+            else if (creditScore >= 650 || experience >= 5) {
+                console.log("Risk Level: Medium Risk");
+                console.log("Loan Status: Further Review Required");
+            }
+            else {
+                console.log("Risk Level: High Risk");
+                console.log("Loan Status: Further Review Required");
+            }
+
+        } else {
+            console.log("Not Eligible");
+            console.log("Loan Status: Does Not Meet Basic Criteria");
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

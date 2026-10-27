@@ -1,0 +1,62 @@
+// TRAFFIC FINE CALCULATOR
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let speed = Number(prompt(" enter your vehicle speed:"));
+        let speedDifference = speed - 30;
+        let helmetOrSeatbelt = prompt("Wearing helmet or seat belt? (yes/no)");
+        let license = prompt("Do you have a valid license? (yes/no)");
+        let previousViolations = Number(prompt("Enter previous violations:"));
+
+        if (speedDifference <= 0) {
+            fine = 0;
+
+        }
+        else if (speedDifference <= 10) {
+            fine = 500;
+        }
+        else if (speedDifference <= 20) {
+            fine = 1000;
+        }
+        else {
+            fine = 2000;
+        }
+
+
+        if (helmetOrSeatbelt == "yes") {
+            fine = fine + 0;
+        }
+        else {
+            fine = fine + 500;
+        }
+        if (license == "yes") {
+            fine = fine + 0;
+        }
+        else {
+            fine = fine + 1000;
+        }
+        if (previousViolations <= 2) {
+            fine = fine + 500;
+        }
+        else {
+            fine = fine + 1000;
+        }
+
+        console.log("totalFine = rs." + fine);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+// MOVIE TICKET PRICING//
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       let age = Number(prompt("Enter your age:"));
+    let seatType = prompt("Enter seat type (normal/premium):");
+    let showTiming = prompt("Enter show timing (morning/evening):");
+    let weekend = prompt("Is it a weekend? (yes/no):");
+    let membership = prompt("Do you have membership? (yes/no):");
+
+    let basePrice ;
+    let finalPrice;
+
+
+    if( seatType=="premium" ){
+        basePrice= 1000;
+    }
+
+    else if ( seatType=="normal"){
+     basePrice=500;
+    }
+    else{
+       console.log(" invalid seat type");
+    }
+
+    if ( age <=12){
+        basePrice= basePrice- 100;
+    }
+    else if ( age >12 && age<=18){
+        basePrice=basePrice-50;
+    }
+    else {
+        basePrice=basePrice + 50;
+    }
+      finalPrice= basePrice;
+
+if (showTiming == "evening") {
+        finalPrice = finalPrice + 50;
+    }
+
+
+    if (weekend == "yes") {
+        finalPrice = finalPrice + 100;
+    }
+
+
+    if (membership == "yes") {
+        finalPrice = finalPrice - 50;
+    }
+
+    console.log("Base Ticket Price: Rs. " + basePrice);
+    console.log("Final Ticket Price: Rs. " + finalPrice);
+</script>
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
